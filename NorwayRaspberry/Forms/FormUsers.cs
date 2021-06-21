@@ -13,13 +13,11 @@ namespace NorwayRaspberry.Forms
 {
     public partial class FormUsers : Form
     {
-        List<UserType> _listOfUsers;
+        ProcessManager process = new ProcessManager();
         public FormUsers()
         {
             InitializeComponent();
-            ProcessManager manager = new ProcessManager();
-            _listOfUsers =  manager.LoadUsers();
-
+            process.LoadUsersToListBox(listBoxOfUsers);
         }
 
         private void ButtonAddUser_Click(object sender, EventArgs e)
@@ -29,10 +27,11 @@ namespace NorwayRaspberry.Forms
                 Name = TextBoxName.Text,
                 Surname = TextBoxSurname.Text
             };
-            ProcessManager abc = new ProcessManager();
-            abc.AddUser(newUser);
+            process.AddUser(newUser);
+            process.LoadUsersToListBox(listBoxOfUsers);
 
 
         }
+
     }
 }

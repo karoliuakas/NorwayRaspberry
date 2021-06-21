@@ -16,6 +16,7 @@ namespace NorwayRaspberry
         public Form1()
         {
             InitializeComponent();
+            this.lblDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {

@@ -1,14 +1,14 @@
 [
   {
+    "Id": 1,
     "Name": "Karolis",
-    "Surname": "Žilevičius"
+    "Surname": "Žilevičius",
+    "Valid": true
   },
   {
-    "Name": "Karolis",
-    "Surname": "Žilevičius"
-  },
-  {
-    "Name": "Karolsi",
-    "Surname": "Karolukas"
+    "Id": 2,
+    "Name": "Another",
+    "Surname": "One",
+    "Valid": true
   }
 ]

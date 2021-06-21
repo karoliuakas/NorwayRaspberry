@@ -30,7 +30,7 @@
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.ButtonMain = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.ButtonClose = new System.Windows.Forms.Button();
             this.ButtonAllDays = new System.Windows.Forms.Button();
             this.ButtonStatistic = new System.Windows.Forms.Button();
@@ -45,8 +45,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.Moccasin;
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMenu.Controls.Add(this.ButtonMain);
-            this.panelMenu.Controls.Add(this.label1);
-            this.panelMenu.Controls.Add(this.ButtonClose);
+            this.panelMenu.Controls.Add(this.lblDate);
             this.panelMenu.Controls.Add(this.ButtonAllDays);
             this.panelMenu.Controls.Add(this.ButtonStatistic);
             this.panelMenu.Controls.Add(this.ButtonUsers);
@@ -68,26 +67,26 @@
             this.ButtonMain.UseVisualStyleBackColor = false;
             this.ButtonMain.Click += new System.EventHandler(this.ButtonMain_Click);
             // 
-            // label1
+            // lblDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Orator Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "2021-06-19";
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Orator Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(35, 21);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(110, 21);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "2021-06-19";
             // 
             // ButtonClose
             // 
             this.ButtonClose.BackColor = System.Drawing.Color.BurlyWood;
             this.ButtonClose.FlatAppearance.BorderSize = 0;
             this.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonClose.Location = new System.Drawing.Point(-12, 525);
+            this.ButtonClose.Location = new System.Drawing.Point(935, 4);
             this.ButtonClose.Name = "ButtonClose";
-            this.ButtonClose.Size = new System.Drawing.Size(214, 28);
+            this.ButtonClose.Size = new System.Drawing.Size(22, 19);
             this.ButtonClose.TabIndex = 4;
-            this.ButtonClose.Text = "UŽDARYTI";
+            this.ButtonClose.Text = "X";
             this.ButtonClose.UseVisualStyleBackColor = false;
             this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
@@ -155,6 +154,7 @@
             this.ClientSize = new System.Drawing.Size(962, 579);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelForms);
+            this.Controls.Add(this.ButtonClose);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Button ButtonAllDays;
         private System.Windows.Forms.Button ButtonStatistic;
         private System.Windows.Forms.Button ButtonMain;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Panel panelForms;
         private System.Windows.Forms.Label label2;
     }
