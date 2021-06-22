@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NorwayRaspberry
@@ -17,6 +10,7 @@ namespace NorwayRaspberry
         {
             InitializeComponent();
             this.lblDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
+            ProcessManager manager = new ProcessManager();
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
