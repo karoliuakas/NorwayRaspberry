@@ -17,26 +17,27 @@ namespace NorwayRaspberry
             _users.Add(user);
 
             string newJson = JsonConvert.SerializeObject(_users, Formatting.Indented);
-            if (!Directory.Exists(@"DB")) Directory.CreateDirectory("DB");
-            File.WriteAllText(@"DB\Users.json", newJson);
+
+            if (!Directory.Exists(@"DB")) Directory.CreateDirectory(@"DB");
+                File.WriteAllText(@"DB\Users.json", newJson);
 
         }
         public List<UserType> LoadUsers()
         {
-            using (StreamReader r = new StreamReader(@"DB\Users.json"))
+            if (File.Exists(@"DB\Users.json"))
             {
-                string json = r.ReadToEnd();
-                if (json.Length < 1)
+                using (StreamReader r = new StreamReader(@"DB\Users.json"))
                 {
-                    return _users;
-                }
-                else
-                {
+                    string json = r.ReadToEnd();
                     _users = JsonConvert.DeserializeObject<List<UserType>>(json);
                     return _users;
                 }
-
             }
+            else
+            {
+                return _users;
+            }
+           
         }
         public void LoadUsersToListBox(ListBox listBox)
         {
