@@ -126,6 +126,9 @@
     <EmbeddedResource Include="Forms\FormAllDays.resx">
       <DependentUpon>FormAllDays.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Program.resx">
       <DependentUpon>Program.cs</DependentUpon>
     </EmbeddedResource>

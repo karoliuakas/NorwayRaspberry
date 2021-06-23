@@ -11,15 +11,19 @@ namespace NorwayRaspberry
     public class ProcessManager
     {
         public List<UserType> _users { get; set; } = new List<UserType>();
+        public List<CollectedStuffType> _statistics { get; set; } = new List<CollectedStuffType>();
         public ListBox _listbox { get; set; }
+        
+        public ProcessManager()
+        {
+            LoadUsers();
+        }
         public void AddUser(UserType user)
         {
             Guid g = Guid.NewGuid();
             user.Id = g;
             _users.Add(user);
             SaveUsers();
-            
-
         }
         public void DeleteUser(Guid id)
         {
@@ -52,7 +56,6 @@ namespace NorwayRaspberry
             {
                 return _users;
             }
-           
         }
         public void LoadUsersToListBox()
         {
@@ -64,6 +67,41 @@ namespace NorwayRaspberry
             }
 
         }
+        public List<CollectedStuffType> LoadStatistic()
+        {
+            if (File.Exists(@"DB\PickedRaspberries.json"))
+            {
+                using (StreamReader r = new StreamReader(@"DB\PickedRaspberries.json"))
+                {
+                    string json = r.ReadToEnd();
+                    _statistics = JsonConvert.DeserializeObject<List<CollectedStuffType>>(json);
+                    return _statistics;
+                }
+            }
+            else
+            {
+                List<CollectedStuffType> a = new List<CollectedStuffType>();
+                return a;
+            }
+
+        }
+        public void AddStatistic(CollectedStuffType stuffObject)
+        {
+            LoadStatistic();
+            _statistics.Add(stuffObject);
+            SaveStatistics();
+
+        }
+        private void SaveStatistics()
+        {
+                string newJson = JsonConvert.SerializeObject(_statistics, Formatting.Indented);
+
+                if (!Directory.Exists(@"DB")) Directory.CreateDirectory(@"DB");
+                File.WriteAllText(@"DB\PickedRaspberries.json", newJson);
+
+            
+        }
+
      
 
     }

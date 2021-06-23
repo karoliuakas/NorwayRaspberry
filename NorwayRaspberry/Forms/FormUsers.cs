@@ -18,6 +18,11 @@ namespace NorwayRaspberry.Forms
 
         private void ButtonAddUser_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(TextBoxName.Text) || string.IsNullOrEmpty(TextBoxSurname.Text))
+            {
+                MessageBox.Show("Užpildykite visus laukus");
+                return;
+            }
             UserType newUser = new UserType
             {
                 Name = TextBoxName.Text,
@@ -29,10 +34,15 @@ namespace NorwayRaspberry.Forms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnDeleteUser_Click(object sender, EventArgs e)
         {
-            List<UserType> ab = process._users.Where(a => a.Valid == true).ToList();
-            Guid index = ab[listBoxOfUsers.SelectedIndex].Id;
+            List<UserType> listWithValidUsers = process._users.Where(a => a.Valid == true).ToList();
+            if (listBoxOfUsers.SelectedIndex == -1)
+            {
+                MessageBox.Show("Pasirinkite varototoją");
+                return;
+            }
+            Guid index = listWithValidUsers[listBoxOfUsers.SelectedIndex].Id;
             process.DeleteUser(index);
         }
     }

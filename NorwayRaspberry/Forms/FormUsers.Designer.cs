@@ -34,7 +34,7 @@
             this.TextBoxSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnDeleteUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ButtonAddUser
@@ -42,7 +42,7 @@
             this.ButtonAddUser.BackColor = System.Drawing.Color.BurlyWood;
             this.ButtonAddUser.FlatAppearance.BorderSize = 0;
             this.ButtonAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAddUser.Location = new System.Drawing.Point(257, 94);
+            this.ButtonAddUser.Location = new System.Drawing.Point(188, 85);
             this.ButtonAddUser.Name = "ButtonAddUser";
             this.ButtonAddUser.Size = new System.Drawing.Size(300, 23);
             this.ButtonAddUser.TabIndex = 0;
@@ -60,14 +60,14 @@
             // 
             // TextBoxName
             // 
-            this.TextBoxName.Location = new System.Drawing.Point(257, 68);
+            this.TextBoxName.Location = new System.Drawing.Point(188, 59);
             this.TextBoxName.Name = "TextBoxName";
             this.TextBoxName.Size = new System.Drawing.Size(144, 20);
             this.TextBoxName.TabIndex = 2;
             // 
             // TextBoxSurname
             // 
-            this.TextBoxSurname.Location = new System.Drawing.Point(407, 68);
+            this.TextBoxSurname.Location = new System.Drawing.Point(338, 59);
             this.TextBoxSurname.Name = "TextBoxSurname";
             this.TextBoxSurname.Size = new System.Drawing.Size(150, 20);
             this.TextBoxSurname.TabIndex = 3;
@@ -75,7 +75,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 52);
+            this.label1.Location = new System.Drawing.Point(247, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
@@ -84,24 +84,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(457, 52);
+            this.label2.Location = new System.Drawing.Point(388, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Pavardė";
             // 
-            // button1
+            // BtnDeleteUser
             // 
-            this.button1.BackColor = System.Drawing.Color.BurlyWood;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(257, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Ištrinti vartotoją";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnDeleteUser.BackColor = System.Drawing.Color.BurlyWood;
+            this.BtnDeleteUser.FlatAppearance.BorderSize = 0;
+            this.BtnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeleteUser.Location = new System.Drawing.Point(188, 114);
+            this.BtnDeleteUser.Name = "BtnDeleteUser";
+            this.BtnDeleteUser.Size = new System.Drawing.Size(300, 23);
+            this.BtnDeleteUser.TabIndex = 7;
+            this.BtnDeleteUser.Text = "Ištrinti vartotoją";
+            this.BtnDeleteUser.UseVisualStyleBackColor = false;
+            this.BtnDeleteUser.Click += new System.EventHandler(this.BtnDeleteUser_Click);
             // 
             // FormUsers
             // 
@@ -109,7 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnDeleteUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TextBoxSurname);
@@ -131,6 +131,6 @@
         private System.Windows.Forms.TextBox TextBoxSurname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnDeleteUser;
     }
 }

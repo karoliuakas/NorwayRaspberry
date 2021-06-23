@@ -8,11 +8,12 @@ namespace NorwayRaspberry.Objects
 {
     public class CollectedStuffType
     {
-        public UserType User { get; set; }
-        public double KgIntoBucket { get; set; }
-        public int Korges { get; set; }
-        public double Metres { get; set;  }
-        public int KgIntoPrivate { get; set;  }
+        public Guid UserID { get; set; }
+        public List<double> KgIntoBucket { get; set; }
+        public List<int> Korges { get; set; }
+        public List<int> Metres { get; set;  }
+        public List<double> KgIntoPrivate { get; set;  }
+        public DateTime Date { get; set; }
 
     }
 }
