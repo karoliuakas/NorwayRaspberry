@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using NorwayRaspberry.Objects;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,16 +11,30 @@ namespace NorwayRaspberry
     public class ProcessManager
     {
         public List<UserType> _users { get; set; } = new List<UserType>();
+        public ListBox _listbox { get; set; }
         public void AddUser(UserType user)
         {
-            if (_users.Count() < 1) user.Id = 1;
-            else user.Id = _users[_users.Count() - 1].Id + 1;
+            Guid g = Guid.NewGuid();
+            user.Id = g;
             _users.Add(user);
+            SaveUsers();
+            
 
+        }
+        public void DeleteUser(Guid id)
+        {
+           var a =_users.FindIndex(c => c.Id == id);
+            _users[a].Valid = false;
+            SaveUsers();
+            
+        }
+        private void SaveUsers()
+        {
             string newJson = JsonConvert.SerializeObject(_users, Formatting.Indented);
 
             if (!Directory.Exists(@"DB")) Directory.CreateDirectory(@"DB");
-                File.WriteAllText(@"DB\Users.json", newJson);
+            File.WriteAllText(@"DB\Users.json", newJson);
+            LoadUsersToListBox();
 
         }
         public List<UserType> LoadUsers()
@@ -39,16 +54,17 @@ namespace NorwayRaspberry
             }
            
         }
-        public void LoadUsersToListBox(ListBox listBox)
+        public void LoadUsersToListBox()
         {
             _users = LoadUsers();
-            listBox.Items.Clear();
+            _listbox.Items.Clear();
             foreach (UserType user in _users)
             {
-                if (user.Valid) listBox.Items.Add(user.Name + " " + user.Surname);
+                if (user.Valid) _listbox.Items.Add(user.Name + " " + user.Surname);
             }
 
         }
+     
 
     }
 }
