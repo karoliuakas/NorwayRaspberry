@@ -13,10 +13,14 @@ namespace NorwayRaspberry
         public List<UserType> _users { get; set; } = new List<UserType>();
         public List<CollectedStuffType> _statistics { get; set; } = new List<CollectedStuffType>();
         public ListBox _listbox { get; set; }
-        
+        private readonly string _usersPath = @"DB\Users.json";
+        private readonly string _statisticsPath = @"DB\PickedRaspberries.json";
+
+
         public ProcessManager()
         {
             LoadUsers();
+            LoadStatistic();
         }
         public void AddUser(UserType user)
         {
@@ -27,30 +31,29 @@ namespace NorwayRaspberry
         }
         public void DeleteUser(Guid id)
         {
-           var a =_users.FindIndex(c => c.Id == id);
+            var a = _users.FindIndex(c => c.Id == id);
             _users[a].Valid = false;
             SaveUsers();
-            
+
         }
         private void SaveUsers()
         {
-            string newJson = JsonConvert.SerializeObject(_users, Formatting.Indented);
-
             if (!Directory.Exists(@"DB")) Directory.CreateDirectory(@"DB");
-            File.WriteAllText(@"DB\Users.json", newJson);
+            Misc.SaveJson(_users, _usersPath);
             LoadUsersToListBox();
 
         }
         public List<UserType> LoadUsers()
         {
-            if (File.Exists(@"DB\Users.json"))
+
+            if (File.Exists(_usersPath))
             {
-                using (StreamReader r = new StreamReader(@"DB\Users.json"))
+                if (new FileInfo(_usersPath).Length != 0)
                 {
-                    string json = r.ReadToEnd();
-                    _users = JsonConvert.DeserializeObject<List<UserType>>(json);
+                    _users = Misc.LoadJson<List<UserType>>(_usersPath);
                     return _users;
                 }
+                else return _users;
             }
             else
             {
@@ -69,14 +72,14 @@ namespace NorwayRaspberry
         }
         public List<CollectedStuffType> LoadStatistic()
         {
-            if (File.Exists(@"DB\PickedRaspberries.json"))
+            if (File.Exists(_statisticsPath))
             {
-                using (StreamReader r = new StreamReader(@"DB\PickedRaspberries.json"))
+                if (new FileInfo(_statisticsPath).Length != 0)
                 {
-                    string json = r.ReadToEnd();
-                    _statistics = JsonConvert.DeserializeObject<List<CollectedStuffType>>(json);
+                    _statistics = Misc.LoadJson<List<CollectedStuffType>>(_statisticsPath);
                     return _statistics;
                 }
+                else return _statistics;
             }
             else
             {
@@ -87,22 +90,18 @@ namespace NorwayRaspberry
         }
         public void AddStatistic(CollectedStuffType stuffObject)
         {
-            LoadStatistic();
             _statistics.Add(stuffObject);
             SaveStatistics();
 
         }
         private void SaveStatistics()
         {
-                string newJson = JsonConvert.SerializeObject(_statistics, Formatting.Indented);
+            if (!Directory.Exists(@"DB")) Directory.CreateDirectory(@"DB");
+            Misc.SaveJson(_statistics, _statisticsPath);
 
-                if (!Directory.Exists(@"DB")) Directory.CreateDirectory(@"DB");
-                File.WriteAllText(@"DB\PickedRaspberries.json", newJson);
-
-            
         }
 
-     
+
 
     }
 }

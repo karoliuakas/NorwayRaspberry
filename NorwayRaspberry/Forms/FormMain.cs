@@ -72,6 +72,7 @@ namespace NorwayRaspberry.Forms
             collectedStuff.KgIntoPrivate = kgToPrivate;
             collectedStuff.Korges = korges;
             collectedStuff.Metres = metres;
+            collectedStuff.Date = DateTime.Now;
 
             process.AddStatistic(collectedStuff);
             Clear();
@@ -82,6 +83,7 @@ namespace NorwayRaspberry.Forms
             kgToPrivate.Clear();
             metres.Clear();
             korges.Clear();
+            
         }
 
     }
