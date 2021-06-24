@@ -24,6 +24,7 @@ namespace NorwayRaspberry.Forms
         public FormMain()
         {
             InitializeComponent();
+            LoadUsersToComboBox();
 
             
         }
@@ -84,6 +85,21 @@ namespace NorwayRaspberry.Forms
             metres.Clear();
             korges.Clear();
             
+        }
+        private void LoadUsersToComboBox()
+        {
+            Dictionary<Guid, string> comboSource = new Dictionary<Guid, string>();
+            foreach (UserType user in process._users)
+            {
+                if (user.Valid) comboSource.Add(user.Id, user.Name + " " + user.Surname);
+            }
+            comboBoxValidUsers.DataSource = new BindingSource(comboSource, null);
+            comboBoxValidUsers.DisplayMember = "Value";
+            comboBoxValidUsers.ValueMember = "Key";
+            Guid key = ((KeyValuePair<Guid, string>)comboBoxValidUsers.SelectedItem).Key;
+            string value = ((KeyValuePair<Guid, string>)comboBoxValidUsers.SelectedItem).Value;
+            MessageBox.Show(key.ToString());
+
         }
 
     }

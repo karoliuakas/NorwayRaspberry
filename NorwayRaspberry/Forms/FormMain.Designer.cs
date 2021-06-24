@@ -43,12 +43,12 @@
             // 
             // comboBoxValidUsers
             // 
+            this.comboBoxValidUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxValidUsers.FormattingEnabled = true;
-            this.comboBoxValidUsers.Location = new System.Drawing.Point(332, 44);
+            this.comboBoxValidUsers.Location = new System.Drawing.Point(332, 65);
             this.comboBoxValidUsers.Name = "comboBoxValidUsers";
             this.comboBoxValidUsers.Size = new System.Drawing.Size(143, 21);
             this.comboBoxValidUsers.TabIndex = 0;
-            this.comboBoxValidUsers.Text = "-- Pasirinkite naudotoją --";
             // 
             // textBoxKgToBucket
             // 
