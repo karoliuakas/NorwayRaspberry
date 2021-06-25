@@ -42,8 +42,13 @@ namespace NorwayRaspberry.Forms
                 MessageBox.Show("Pasirinkite varototoją");
                 return;
             }
-            Guid index = listWithValidUsers[listBoxOfUsers.SelectedIndex].Id;
-            process.DeleteUser(index);
+            DialogResult dialogResult = MessageBox.Show("Ar tikrai norite ištrinti šį rinkėją", "Naudotojo ištrynimas", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Guid index = listWithValidUsers[listBoxOfUsers.SelectedIndex].Id;
+                process.DeleteUser(index);
+            }
+            
         }
     }
 }

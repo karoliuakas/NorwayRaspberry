@@ -98,6 +98,7 @@ namespace NorwayRaspberry
         {
             if (!Directory.Exists(@"DB")) Directory.CreateDirectory(@"DB");
             Misc.SaveJson(_statistics, _statisticsPath);
+            LoadStatistic();
 
         }
 

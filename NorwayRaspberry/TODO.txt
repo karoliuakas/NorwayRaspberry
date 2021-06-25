@@ -1,8 +1,8 @@
-﻿♠ Add user by combo box.
-♠ Show statistics and link user with it.
-♠ Show current progress of picked object.
+﻿♠ Show statistics and link user with it.
 ♠ Possibility of changing current progress [ if there is any mistake]
-♠ Catch errors of bad value [ strings, chars, etc...]
 ♠ Generate days by params [ user, day, records]
 
 ------------------DONE----------------------
+♠ Add user by combo box.
+♠ Show current progress of picked object.
+♠ Catch errors of bad value [ strings, chars, etc...]

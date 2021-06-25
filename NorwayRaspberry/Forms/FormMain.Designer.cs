@@ -38,17 +38,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxMetres = new System.Windows.Forms.TextBox();
             this.ButtonAddDay = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblKgToBucket = new System.Windows.Forms.Label();
+            this.lblKgToPrivate = new System.Windows.Forms.Label();
+            this.lblKorges = new System.Windows.Forms.Label();
+            this.lblMetres = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBoxValidUsers
             // 
             this.comboBoxValidUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxValidUsers.FormattingEnabled = true;
-            this.comboBoxValidUsers.Location = new System.Drawing.Point(332, 65);
+            this.comboBoxValidUsers.Location = new System.Drawing.Point(315, 66);
             this.comboBoxValidUsers.Name = "comboBoxValidUsers";
-            this.comboBoxValidUsers.Size = new System.Drawing.Size(143, 21);
+            this.comboBoxValidUsers.Size = new System.Drawing.Size(224, 21);
             this.comboBoxValidUsers.TabIndex = 0;
+            this.comboBoxValidUsers.Text = "----- PASIRINKITE NAUDOTOJĄ ------";
             // 
             // textBoxKgToBucket
             // 
@@ -57,6 +61,7 @@
             this.textBoxKgToBucket.Size = new System.Drawing.Size(100, 20);
             this.textBoxKgToBucket.TabIndex = 1;
             this.textBoxKgToBucket.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKgToBucket_KeyDown);
+            this.textBoxKgToBucket.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label1
             // 
@@ -83,6 +88,7 @@
             this.textBoxKgToPrivate.Size = new System.Drawing.Size(100, 20);
             this.textBoxKgToPrivate.TabIndex = 3;
             this.textBoxKgToPrivate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKgToPrivate_KeyDown);
+            this.textBoxKgToPrivate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label3
             // 
@@ -100,6 +106,7 @@
             this.textBoxKorges.Size = new System.Drawing.Size(100, 20);
             this.textBoxKorges.TabIndex = 5;
             this.textBoxKorges.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKorges_KeyDown);
+            this.textBoxKorges.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label4
             // 
@@ -117,6 +124,7 @@
             this.textBoxMetres.Size = new System.Drawing.Size(100, 20);
             this.textBoxMetres.TabIndex = 7;
             this.textBoxMetres.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxMetres_KeyDown);
+            this.textBoxMetres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // ButtonAddDay
             // 
@@ -126,18 +134,41 @@
             this.ButtonAddDay.Name = "ButtonAddDay";
             this.ButtonAddDay.Size = new System.Drawing.Size(292, 33);
             this.ButtonAddDay.TabIndex = 10;
-            this.ButtonAddDay.Text = "UŽSAUGOTI";
+            this.ButtonAddDay.Text = "IŠSAUGOTI";
             this.ButtonAddDay.UseVisualStyleBackColor = false;
             this.ButtonAddDay.Click += new System.EventHandler(this.ButtonAddDay_Click);
             // 
-            // label5
+            // lblKgToBucket
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(261, 247);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            this.lblKgToBucket.AutoSize = true;
+            this.lblKgToBucket.Location = new System.Drawing.Point(140, 164);
+            this.lblKgToBucket.Name = "lblKgToBucket";
+            this.lblKgToBucket.Size = new System.Drawing.Size(0, 13);
+            this.lblKgToBucket.TabIndex = 11;
+            // 
+            // lblKgToPrivate
+            // 
+            this.lblKgToPrivate.AutoSize = true;
+            this.lblKgToPrivate.Location = new System.Drawing.Point(278, 164);
+            this.lblKgToPrivate.Name = "lblKgToPrivate";
+            this.lblKgToPrivate.Size = new System.Drawing.Size(0, 13);
+            this.lblKgToPrivate.TabIndex = 12;
+            // 
+            // lblKorges
+            // 
+            this.lblKorges.AutoSize = true;
+            this.lblKorges.Location = new System.Drawing.Point(414, 164);
+            this.lblKorges.Name = "lblKorges";
+            this.lblKorges.Size = new System.Drawing.Size(0, 13);
+            this.lblKorges.TabIndex = 13;
+            // 
+            // lblMetres
+            // 
+            this.lblMetres.AutoSize = true;
+            this.lblMetres.Location = new System.Drawing.Point(568, 162);
+            this.lblMetres.Name = "lblMetres";
+            this.lblMetres.Size = new System.Drawing.Size(0, 13);
+            this.lblMetres.TabIndex = 14;
             // 
             // FormMain
             // 
@@ -145,7 +176,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblMetres);
+            this.Controls.Add(this.lblKorges);
+            this.Controls.Add(this.lblKgToPrivate);
+            this.Controls.Add(this.lblKgToBucket);
             this.Controls.Add(this.ButtonAddDay);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxMetres);
@@ -175,6 +209,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxMetres;
         private System.Windows.Forms.Button ButtonAddDay;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblKgToBucket;
+        private System.Windows.Forms.Label lblKgToPrivate;
+        private System.Windows.Forms.Label lblKorges;
+        private System.Windows.Forms.Label lblMetres;
     }
 }

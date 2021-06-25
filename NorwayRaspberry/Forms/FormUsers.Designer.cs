@@ -42,7 +42,7 @@
             this.ButtonAddUser.BackColor = System.Drawing.Color.BurlyWood;
             this.ButtonAddUser.FlatAppearance.BorderSize = 0;
             this.ButtonAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAddUser.Location = new System.Drawing.Point(188, 85);
+            this.ButtonAddUser.Location = new System.Drawing.Point(202, 82);
             this.ButtonAddUser.Name = "ButtonAddUser";
             this.ButtonAddUser.Size = new System.Drawing.Size(300, 23);
             this.ButtonAddUser.TabIndex = 0;
@@ -52,22 +52,26 @@
             // 
             // listBoxOfUsers
             // 
+            this.listBoxOfUsers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxOfUsers.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxOfUsers.FormattingEnabled = true;
-            this.listBoxOfUsers.Location = new System.Drawing.Point(42, 46);
+            this.listBoxOfUsers.ItemHeight = 22;
+            this.listBoxOfUsers.Location = new System.Drawing.Point(508, 32);
             this.listBoxOfUsers.Name = "listBoxOfUsers";
-            this.listBoxOfUsers.Size = new System.Drawing.Size(130, 342);
+            this.listBoxOfUsers.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBoxOfUsers.Size = new System.Drawing.Size(153, 354);
             this.listBoxOfUsers.TabIndex = 1;
             // 
             // TextBoxName
             // 
-            this.TextBoxName.Location = new System.Drawing.Point(188, 59);
+            this.TextBoxName.Location = new System.Drawing.Point(201, 50);
             this.TextBoxName.Name = "TextBoxName";
             this.TextBoxName.Size = new System.Drawing.Size(144, 20);
             this.TextBoxName.TabIndex = 2;
             // 
             // TextBoxSurname
             // 
-            this.TextBoxSurname.Location = new System.Drawing.Point(338, 59);
+            this.TextBoxSurname.Location = new System.Drawing.Point(351, 50);
             this.TextBoxSurname.Name = "TextBoxSurname";
             this.TextBoxSurname.Size = new System.Drawing.Size(150, 20);
             this.TextBoxSurname.TabIndex = 3;
@@ -75,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(247, 43);
+            this.label1.Location = new System.Drawing.Point(260, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
@@ -84,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(388, 43);
+            this.label2.Location = new System.Drawing.Point(401, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 5;
@@ -95,7 +99,7 @@
             this.BtnDeleteUser.BackColor = System.Drawing.Color.BurlyWood;
             this.BtnDeleteUser.FlatAppearance.BorderSize = 0;
             this.BtnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDeleteUser.Location = new System.Drawing.Point(188, 114);
+            this.BtnDeleteUser.Location = new System.Drawing.Point(201, 363);
             this.BtnDeleteUser.Name = "BtnDeleteUser";
             this.BtnDeleteUser.Size = new System.Drawing.Size(300, 23);
             this.BtnDeleteUser.TabIndex = 7;
