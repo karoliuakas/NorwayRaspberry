@@ -1,0 +1,9 @@
+{
+	"prices": {
+		"KgToBucket": 10,
+		"KgToPrivate": 20,
+		"KgKorges": 25,
+		"Metres": 3
+	},
+	"ExchangeRate": 10.5
+}

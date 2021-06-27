@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FormAllDays
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormAllDays";
-            this.Text = "FormAllDays";
-            this.ResumeLayout(false);
+			this.SuspendLayout();
+			// 
+			// FormAllDays
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Cornsilk;
+			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Name = "FormAllDays";
+			this.Text = "FormAllDays";
+			this.ResumeLayout(false);
 
         }
 

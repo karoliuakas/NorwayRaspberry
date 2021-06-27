@@ -15,7 +15,6 @@ namespace NorwayRaspberry
         public ListBox _listbox {private get; set; }
         private readonly string _usersPath = @"DB\Users.json";
         private readonly string _statisticsPath = @"DB\PickedRaspberries.json";
-        public double _rateOfExchange = 10.5;
 
 
         public ProcessManager()
