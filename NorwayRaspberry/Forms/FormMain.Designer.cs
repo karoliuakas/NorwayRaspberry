@@ -42,6 +42,7 @@
             this.lblKgToPrivate = new System.Windows.Forms.Label();
             this.lblKorges = new System.Windows.Forms.Label();
             this.lblMetres = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // comboBoxValidUsers
@@ -170,12 +171,22 @@
             this.lblMetres.Size = new System.Drawing.Size(0, 13);
             this.lblMetres.TabIndex = 14;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(538, 176);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(8, 8);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblMetres);
             this.Controls.Add(this.lblKorges);
             this.Controls.Add(this.lblKgToPrivate);
@@ -213,5 +224,6 @@
         private System.Windows.Forms.Label lblKgToPrivate;
         private System.Windows.Forms.Label lblKorges;
         private System.Windows.Forms.Label lblMetres;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

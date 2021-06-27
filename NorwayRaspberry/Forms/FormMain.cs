@@ -24,9 +24,7 @@ namespace NorwayRaspberry.Forms
         public FormMain()
         {
             InitializeComponent();
-          if(process._users.Count > 0) LoadUsersToComboBox();
-
-
+           Misc.LoadUsersToComboBox(comboBoxValidUsers, true);
 
         }
         private void textBoxKgToBucket_KeyDown(object sender, KeyEventArgs e)
@@ -105,19 +103,6 @@ namespace NorwayRaspberry.Forms
             lblKgToPrivate.Text = "";
             lblKorges.Text = "";
             lblMetres.Text = "";
-
-        }
-        private void LoadUsersToComboBox()
-        {
-            Dictionary<Guid, string> comboSource = new Dictionary<Guid, string>();
-            foreach (UserType user in process._users)
-            {
-                if (user.Valid) comboSource.Add(user.Id, user.Name + " " + user.Surname);
-            }
-            comboBoxValidUsers.DataSource = new BindingSource(comboSource, null);
-            comboBoxValidUsers.DisplayMember = "Value";
-            comboBoxValidUsers.ValueMember = "Key";
-     
 
         }
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)

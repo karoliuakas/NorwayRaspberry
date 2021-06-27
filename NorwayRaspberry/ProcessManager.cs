@@ -12,9 +12,10 @@ namespace NorwayRaspberry
     {
         public List<UserType> _users { get; set; } = new List<UserType>();
         public List<CollectedStuffType> _statistics { get; set; } = new List<CollectedStuffType>();
-        public ListBox _listbox { get; set; }
+        public ListBox _listbox {private get; set; }
         private readonly string _usersPath = @"DB\Users.json";
         private readonly string _statisticsPath = @"DB\PickedRaspberries.json";
+        public double _rateOfExchange = 10.5;
 
 
         public ProcessManager()
@@ -62,7 +63,6 @@ namespace NorwayRaspberry
         }
         public void LoadUsersToListBox()
         {
-            _users = LoadUsers();
             _listbox.Items.Clear();
             foreach (UserType user in _users)
             {

@@ -31,12 +31,13 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.ButtonMain = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
-            this.ButtonClose = new System.Windows.Forms.Button();
             this.ButtonAllDays = new System.Windows.Forms.Button();
             this.ButtonStatistic = new System.Windows.Forms.Button();
             this.ButtonUsers = new System.Windows.Forms.Button();
+            this.ButtonClose = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.ButtonOtherStuff = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Moccasin;
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenu.Controls.Add(this.ButtonOtherStuff);
             this.panelMenu.Controls.Add(this.ButtonMain);
             this.panelMenu.Controls.Add(this.lblDate);
             this.panelMenu.Controls.Add(this.ButtonAllDays);
@@ -76,19 +78,6 @@
             this.lblDate.Size = new System.Drawing.Size(110, 21);
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "2021-06-19";
-            // 
-            // ButtonClose
-            // 
-            this.ButtonClose.BackColor = System.Drawing.Color.BurlyWood;
-            this.ButtonClose.FlatAppearance.BorderSize = 0;
-            this.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonClose.Location = new System.Drawing.Point(935, 4);
-            this.ButtonClose.Name = "ButtonClose";
-            this.ButtonClose.Size = new System.Drawing.Size(22, 19);
-            this.ButtonClose.TabIndex = 4;
-            this.ButtonClose.Text = "X";
-            this.ButtonClose.UseVisualStyleBackColor = false;
-            this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
             // ButtonAllDays
             // 
@@ -125,9 +114,22 @@
             this.ButtonUsers.Name = "ButtonUsers";
             this.ButtonUsers.Size = new System.Drawing.Size(214, 28);
             this.ButtonUsers.TabIndex = 1;
-            this.ButtonUsers.Text = "VARTOTOJAI";
+            this.ButtonUsers.Text = "RINKĖJAI";
             this.ButtonUsers.UseVisualStyleBackColor = false;
             this.ButtonUsers.Click += new System.EventHandler(this.ButtonUsers_Click);
+            // 
+            // ButtonClose
+            // 
+            this.ButtonClose.BackColor = System.Drawing.Color.BurlyWood;
+            this.ButtonClose.FlatAppearance.BorderSize = 0;
+            this.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonClose.Location = new System.Drawing.Point(935, 4);
+            this.ButtonClose.Name = "ButtonClose";
+            this.ButtonClose.Size = new System.Drawing.Size(22, 19);
+            this.ButtonClose.TabIndex = 4;
+            this.ButtonClose.Text = "X";
+            this.ButtonClose.UseVisualStyleBackColor = false;
+            this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
             // panelForms
             // 
@@ -145,6 +147,19 @@
             this.label2.Size = new System.Drawing.Size(324, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Raspberry picking system";
+            // 
+            // ButtonOtherStuff
+            // 
+            this.ButtonOtherStuff.BackColor = System.Drawing.Color.BurlyWood;
+            this.ButtonOtherStuff.FlatAppearance.BorderSize = 0;
+            this.ButtonOtherStuff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonOtherStuff.Location = new System.Drawing.Point(-12, 326);
+            this.ButtonOtherStuff.Name = "ButtonOtherStuff";
+            this.ButtonOtherStuff.Size = new System.Drawing.Size(214, 28);
+            this.ButtonOtherStuff.TabIndex = 6;
+            this.ButtonOtherStuff.Text = "KITA";
+            this.ButtonOtherStuff.UseVisualStyleBackColor = false;
+            this.ButtonOtherStuff.Click += new System.EventHandler(this.ButtonOtherStuff_Click);
             // 
             // Form1
             // 
@@ -178,6 +193,7 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Panel panelForms;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button ButtonOtherStuff;
     }
 }
 

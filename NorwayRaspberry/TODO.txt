@@ -1,8 +1,11 @@
-﻿♠ Show statistics and link user with it.
+﻿------------------FEATURES----------------------
 ♠ Possibility of changing current progress [ if there is any mistake]
 ♠ Generate days by params [ user, day, records]
+♠ Get currency from any free API or change it by yourself.
+♠ Change price of berries.
 
 ------------------DONE----------------------
 ♠ Add user by combo box.
 ♠ Show current progress of picked object.
 ♠ Catch errors of bad value [ strings, chars, etc...]
+♠ Show statistics and link user with it.

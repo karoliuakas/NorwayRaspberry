@@ -10,7 +10,8 @@ namespace NorwayRaspberry
         {
             InitializeComponent();
             this.lblDate.Text = DateTime.Today.ToString("yyyy-MM-dd");
-            ProcessManager manager = new ProcessManager();
+            OpenChildForm(new Forms.FormMain(), null) ;
+
         }
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -52,6 +53,11 @@ namespace NorwayRaspberry
         private void ButtonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ButtonOtherStuff_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormOtherStuff(), sender);
         }
     }
 }
