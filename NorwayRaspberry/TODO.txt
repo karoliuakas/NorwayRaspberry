@@ -3,6 +3,7 @@
 ♠ Generate days by params [ user, day, records]
 ♠ Get currency from any free API or change it by yourself.
 ♠ Change price of berries.
+♠ Enter real data for verification with current progress in farm and in factory. [ show difference]
 
 ------------------DONE----------------------
 ♠ Add user by combo box.

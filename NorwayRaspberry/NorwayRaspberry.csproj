@@ -124,6 +124,7 @@
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Misc.cs" />
+    <Compile Include="Objects\CollectedBerriesBaseType.cs" />
     <Compile Include="Objects\CollectedStuffType.cs" />
     <Compile Include="Objects\UserType.cs" />
     <Compile Include="ProcessManager.cs" />
