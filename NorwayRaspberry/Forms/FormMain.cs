@@ -78,7 +78,7 @@ namespace NorwayRaspberry.Forms
             collectedStuff.KgIntoPrivate = kgToPrivate;
             collectedStuff.Korges = korges;
             collectedStuff.Metres = metres;
-            collectedStuff.Date = DateTime.Now;
+            collectedStuff.Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             collectedStuff.UserID = key;
             if (kgToBucket.Count == 0 && kgToPrivate.Count == 0 && korges.Count == 0 && metres.Count ==0)
             {
